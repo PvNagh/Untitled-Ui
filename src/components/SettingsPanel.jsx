@@ -20,6 +20,7 @@ const TextBox = styled(Box)`
 const SettingsPanel = () => {
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+    const phones = useMediaQuery("(max-width: 480px)");
 
     const [value, setValue] = useState("1");
 
@@ -31,7 +32,8 @@ const SettingsPanel = () => {
         <Box
             border={{ border: "3px solid #e9ecef", borderBottom: "none" }}
             borderRadius="60px 0px 0px 0px"
-            padding="22px 15px 0px 15px">
+            padding="22px 15px 0px 15px"
+            >
             <Box display="flex" alignItems="center" >
                 <FiberManualRecord style={{ padding: "8px", fontSize: "14px" }} />
                 <Box sx={{ fontWeight: 550, fontSize: isSmallScreen ? "20px" : "24px" }}>
@@ -39,9 +41,8 @@ const SettingsPanel = () => {
                 </Box>
             </Box>
             <Box display="flex" margin="20px 13px" justifyContent="space-between">
-                <Box >
+                <Box display="flex" flexDirection="column" textAlign="left">
                     <Box
-                        display="flex"
                         sx={{
                             padding: "2.5px 0px", fontWeight: 500,
                             fontSize: isSmallScreen ? "16px" : "18px"
@@ -76,8 +77,8 @@ const SettingsPanel = () => {
                 </Box>
             </Box>
             <Divider sx={{ borderColor: "#e9ecef", margin: !isSmallScreen ? "18px 12px" : "0px 12px", borderWidth: "1px" }} />
-            <Box display="flex" margin={!isSmallScreen ? "16px 13px" : "10px 13px"} >
-                <TextBox>
+            <Box display="flex" justifyContent={phones && "space-between"} flexDirection="row" margin={!isSmallScreen ? "16px 13px" : "10px 13px"} >
+                <Box display="flex" flexDirection="column" textAlign="left" minWidth={!phones &&"300px"}>
                     <Box
                         display="flex"
                         sx={{
@@ -89,10 +90,8 @@ const SettingsPanel = () => {
                             fontWeight: 400, fontSize: isSmallScreen ? "13px" : "14px",
                             color: "#6B7280"
                         }}>Make the desktop sidebar transparent.</Box>
-                </TextBox>
-                <FormControlLabel
-                    control={<SwitchButton />}
-                />
+                </Box>
+                <SwitchButton />
             </Box>
             <Divider sx={{ borderColor: "#e9ecef", margin: !isSmallScreen ? "18px 12px" : "0px 12px", borderWidth: "1px" }} />
             <Box display="flex" margin={!isSmallScreen ? "16px 13px" : "10px 13px"} flexDirection={isSmallScreen ? "column" : "row"}>

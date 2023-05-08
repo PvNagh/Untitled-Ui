@@ -9,7 +9,6 @@ const Cards = ({ selected, path, sub, id }) => {
                 marginBottom: { xs: 2,  md: 0  },
                 marginRight: { xs: 2,  md: 2  },
                 cursor: "pointer",
-   
             }}
         >
             {selected && (

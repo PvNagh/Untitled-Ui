@@ -43,6 +43,6 @@ const IOSSwitch = styled((props) => (
 }));
 
 const SwitchButton = () => {
-    return (<IOSSwitch  sx={{ mb: 2, ml:2}} />)
+    return (<IOSSwitch  sx={{ mb: 2}} />)
 }
 export default SwitchButton;

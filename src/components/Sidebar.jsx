@@ -11,13 +11,14 @@ const Sidebar = () => {
         <Box
             display="flex"
             flexDirection="column"
-            justifyContent="flex-start"
+            justifyContent="space-between"
             alignItems="center"
-            padding="0.5rem 2rem 1.5rem 2rem"
+            height="100%"
+            padding="0rem 2rem 0rem 2rem"
             borderRight={{ border: "3px solid #e9ecef" }}
         >
-            <Box mb="2.3rem">
-                <IconButton sx={{ mb: "0.2rem", }}><AddBoxOutlined sx={{ fontSize: 30, color: "black", "&:hover": { color: "#658af8" } }} /></IconButton>
+            <Box>
+                <IconButton sx={{ mt: "0.4rem", mb: "0.2rem" }}><AddBoxOutlined sx={{ fontSize: 30, color: "black", "&:hover": { color: "#658af8" } }} /></IconButton>
                 <IconButton sx={{ mb: "0.2rem" }}><OtherHousesOutlined sx={{ color: "black", "&:hover": { color: "#658af8" } }} /></IconButton>
                 <IconButton sx={{ mb: "0.2rem" }}><NearMeOutlined sx={{ color: "black", "&:hover": { color: "#658af8" } }} /></IconButton>
                 <IconButton sx={{ mb: "0.2rem" }}><LayersOutlined sx={{ color: "black", "&:hover": { color: "#658af8" } }} /></IconButton>
@@ -26,7 +27,7 @@ const Sidebar = () => {
                 <IconButton sx={{ mb: "0.2rem" }}><PeopleAltOutlined sx={{ fontSize: 21, color: "black", "&:hover": { color: "#658af8" } }} /></IconButton>
                 <IconButton sx={{ mb: "0.2rem" }}><SettingsOutlined sx={{ color: "black", "&:hover": { color: "#658af8" } }} /></IconButton>
             </Box>
-            <Box sx={{ mb: "3.2rem" }}>
+            <Box>
                 <IconButton sx={{ mb: "0.6rem" }}><AddBoxOutlined sx={{ fontSize: 30, color: "black", "&:hover": { color: "#658af8" } }} /></IconButton>
                 <IconButton sx={{ mb: "0.6rem" }}><FiberManualRecord sx={{ fontSize: 10, color: "purple" }} /></IconButton>
                 <IconButton sx={{ mb: "0.6rem" }}><FiberManualRecord sx={{ fontSize: 10, color: "blue" }} /></IconButton>
