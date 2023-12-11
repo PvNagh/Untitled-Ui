@@ -1,9 +1,5 @@
 # Untitled-Ui
 
-- Untitled-UI curated using react and material-ui.
-- Fully responsive.
-- Live Demo: https://untitled-ui-lac.vercel.app
-
 ![image](https://github.com/PvNagh/Untitled-Ui/assets/120133552/e8740abe-2b0c-4f68-9a06-782c942dcf14)
 
 ---
